@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
 
-  <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Fork Me! FCC: Test Suite Template</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-<h1>Hello World, we are Software Developers </h1>    
-    <script  src="js/index.js"></script>
-  </body>
+<body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  <h1 id="title">e-commerce Survey Form</h1>
+  <p id="description">Tell us more the product</p>
+  <form id='survey-form' method="post" action="">
+    <div>
+      <label id='name-label'>Name</label>
+      <input type="text" id="name" placeholder='Enter your FirstName'>
+
+    </div>
+    <div>
+      <label id='email-label'>Email</label>
+      <input name="email" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+        placeholder="Enter Email" id="email" required="">
+    </div>
+    <div>
+      <label id='number-label'>Number</label>
+      <input type="number" id="number" pattern="[0-9]" required min='1' max='9' placeholder="Enter Your Phone Number">
+    </div>
+    <div>
+      <select id="dropdown">
+        <option name='drop' value="A">Satisfied</option>
+        <option name='drop' value="B">Not Satisfied</option>
+        <option name='drop' value="C">Can not say</option>
+      </select>
+      <input type="radio" name="gender" value="M">Male
+      <input type="radio" name="gender" value="F">Female
+    </div>
+    <div>
+      <input type="checkbox" value="A">Fruits
+      <input type="checkbox" value="B">Veggies
+      <input type="checkbox" value="C">Grains
+    </div>
+    <div>
+      <textarea name="textarea" id="text-area" cols="30" rows="10" placeholder="Any other comment(s)..."></textarea>
+    </div>
+    <div>
+      <button type="submit" id='submit'>Submit</button>
+    </div>
+  </form>
+
+  <script src="js/index.js"></script>
+</body>
+
 </html>
